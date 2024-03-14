@@ -38,7 +38,6 @@ background-color: #dadbd3;
 .chat_body::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0.1); /* Color of the track */
 }
-
 .chat_message {
   position: relative;
   font-size: 16px;
@@ -68,12 +67,8 @@ background-color: #dadbd3;
   background-color: #e8e8e8; /* Different color for receiver */
 }
 
- .chat_name {
-  position: absolute;
-  top: -15px;
-  font-weight: bold;
-  font-size: small;
-  text-transform: capitalize;
+.seen {
+  opacity: 0.6; /* Decrease opacity for seen messages */
 }
 /* .chat_sender{
   margin-left: auto;
