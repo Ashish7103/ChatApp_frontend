@@ -121,8 +121,8 @@ const response= await fetch(`${baseUrl}/messages/new`, {
             type="text"
             placeholder="Type your message..."
           ></input>
-          <button onClick={sendMessage}  type="submit" >
-            Send message
+          <button className="text-black text-bold" onClick={sendMessage}  type="submit" >
+         &larr;
           </button>
         </form>
         <IconButton>
