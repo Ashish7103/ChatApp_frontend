@@ -38,7 +38,7 @@ const response= await fetch(`${baseUrl}/messages/new`, {
     message: input,
     name: "Demon ",
     timeStamp: new Date().toUTCString(),
-    received: true
+    // received: true
   })
 })
   .then(response => {
