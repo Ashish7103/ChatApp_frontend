@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
+  /* text-align: center; */
+}
+
+.App{
+display: grid;
+place-items: center;
+height: 100vh;
+/* width: 100vw; */
+background-color: #dadbd3;
+}
+.chat_body {
+  flex: 1;
+  overflow-y: scroll;
+  background: repeat;
+  background-position: center;
+}
+
+/* Custom scrollbar */
+.chat_body::-webkit-scrollbar {
+  width: 10px;
+}
+
+.chat_body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2); /* Color of the thumb */
+  border-radius: 5px;
+}
+
+.chat_body::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.1); /* Color of the track */
+}
+
+.chat_message {
+  position: relative;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  margin-bottom: 30px;
+  width: fit-content;
+}
+
+ .chat_name {
+  position: absolute;
+  top: -15px;
+  font-weight: bold;
+  font-size: small;
+  text-transform: capitalize;
+}
+.chat_sender{
+  margin-left: auto;
+  background-color: #dcf8c6;
+  
+}
+
+.chat_message .chat_timestamp {
+  margin-left: 10px;
+  font-size: small;
+}
