@@ -38,7 +38,7 @@ const response= await fetch(`${baseUrl}/messages/new`, {
     message: input,
     name: "Demon ",
     timeStamp: new Date().toUTCString(),
-    // received: true
+    received: true
   })
 })
   .then(response => {
@@ -101,7 +101,7 @@ const response= await fetch(`${baseUrl}/messages/new`, {
       >
    {messages.map((message) => (
     <>
-  <p className={message.recieved ? "chat_message chat_sender" : "chat_message"}>
+  <p className={message.received ? "chat_message chat_receiver" : "chat_message chat_sender"}>
   {/* <p className={`chat_message ${message.recieved && "chat_sender"}`}> */}
     <span className="chat_name">{message.name}</span>
     {message.message}

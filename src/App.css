@@ -50,6 +50,24 @@ background-color: #dadbd3;
   width: fit-content;
 }
 
+.chat_name {
+  position: absolute;
+  top: -15px;
+  font-weight: bold;
+  font-size: small;
+  text-transform: capitalize;
+}
+
+.chat_sender {
+  margin-left: auto;
+  background-color: #dcf8c6; /* Green color for sender */
+}
+
+.chat_receiver {
+  margin-right: auto;
+  background-color: #e8e8e8; /* Different color for receiver */
+}
+
  .chat_name {
   position: absolute;
   top: -15px;
@@ -57,11 +75,11 @@ background-color: #dadbd3;
   font-size: small;
   text-transform: capitalize;
 }
-.chat_sender{
+/* .chat_sender{
   margin-left: auto;
   background-color: #dcf8c6;
   
-}
+} */
 
 .chat_message .chat_timestamp {
   margin-left: 10px;
