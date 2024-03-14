@@ -5,6 +5,8 @@ import "./App.css";
 import Chat from "./components/Chat";
 import SideBar from "./components/SideBar";
 
+
+const baseUrl="https://chatapp-backend-tpjv.onrender.com";
 function App() {
   const [messages, setMessages] = useState([]);
   // const [effectCounter, setEffectCounter] = useState(0); // Initialize counter state
@@ -12,7 +14,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:4000/messages/sync");
+        const response = await fetch(`${baseUrl}/messages/sync`);
         const data = await response.json();
         setMessages(data);
        

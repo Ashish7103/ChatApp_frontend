@@ -8,6 +8,11 @@ import AttachFileIcon from "@mui/icons-material/AttachFile";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import MicIcon from "@mui/icons-material/Mic";
 import "../App.css";
+
+
+// url of bakend 
+
+const baseUrl="https://chatapp-backend-tpjv.onrender.com";
 // import app from "../../../whatsapp-bakend/app";
 import { Mic } from "@mui/icons-material";
 const decorateIcon = {
@@ -24,7 +29,7 @@ const Chat = ({messages}) => {
 
   const sendMessage=async (e)=>{
 e.preventDefault()
-const response= await fetch('http://localhost:4000/messages/new', {
+const response= await fetch(`${baseUrl}/messages/new`, {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
