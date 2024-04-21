@@ -7,6 +7,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import EmojiEmotionsIcon from "@mui/icons-material/EmojiEmotions";
 import MicIcon from "@mui/icons-material/Mic";
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import "../App.css";
 
 
@@ -93,21 +94,21 @@ const response= await fetch(`${baseUrl}/messages/new`, {
         </div>
       </div>
       <div
-  
+        
         className="chat_body h-[80%] w-[98%]   rounded-md  p-[30px] "
         style={{
           backgroundImage: "url('https://wallpapercave.com/wp/wp4410721.jpg')",
         }}
       >
    {messages.map((message) => (
-    <>
+    <React.Fragment key={message._id}>
     <p className={message.received ? (message.seenByReceiver ? "chat_message chat_receiver seen" : "chat_message chat_receiver") : "chat_message chat_sender"}>
   {/* <p className={`chat_message ${message.recieved && "chat_sender"}`}> */}
     <span className="chat_name">{message.name}</span>
     {message.message}
     <span className="chat_timestamp">{message.timeStamp}</span>
   </p>
-  </>
+  </React.Fragment>
 ))}
        
       </div>
@@ -122,7 +123,7 @@ const response= await fetch(`${baseUrl}/messages/new`, {
             placeholder="Type your message..."
           ></input>
           <button className="text-black text-bold" onClick={sendMessage}  type="submit" >
-         &larr;
+        <ArrowRightAltIcon style={style} />
           </button>
         </form>
         <IconButton>

@@ -26,7 +26,7 @@ function App() {
 
     fetchData();
   },[]);
-  console.log(messages);
+
   
   useEffect(() => {
     var pusher = new Pusher('2e8e79fd5b0e0b5a6534', {
@@ -47,7 +47,7 @@ function App() {
     };
   },[messages]
   );
-   console.log(messages);
+  
 
   return (
     <>
